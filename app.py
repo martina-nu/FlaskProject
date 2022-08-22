@@ -23,9 +23,9 @@ def result(country,variety,aroma,aftertaste,acidity,body,balance,moisture):
     text_result = result.tolist()[0]
 
     if text_result == 'Yes':
-        return jasonify(message='Es un café de especialidad'),200
+        return jsonify(message='Es un café de especialidad'),200
     else:
-        return jasonify(message='No es un café de especialidad'),200
+        return jsonify(message='No es un café de especialidad'),200
 
 if __name__ == '__main__':
     app.run(debug= True, host='127.0.0.1', port=5000) 
